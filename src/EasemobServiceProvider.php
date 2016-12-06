@@ -2,7 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class TestServiceProvider extends ServiceProvider {
+class EasemobServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
