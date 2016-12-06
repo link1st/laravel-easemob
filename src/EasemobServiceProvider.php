@@ -44,7 +44,7 @@ class EasemobServiceProvider extends ServiceProvider {
 
         // 容器绑定
         $this->app->bind('Easemob', function () {
-            return new easemob();
+            return new Easemob();
         });
 	}
 
