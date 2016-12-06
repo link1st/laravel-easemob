@@ -1,5 +1,5 @@
 <?php
-
+namespace link1st\Easemob\App;
 /**
  * Created by PhpStorm.
  * User: link

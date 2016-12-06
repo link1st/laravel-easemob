@@ -2,6 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
+use link1st\Easemob\App\Easemob;
+
 class EasemobServiceProvider extends ServiceProvider {
 
 	/**
