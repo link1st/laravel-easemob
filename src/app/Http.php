@@ -25,11 +25,12 @@ class Http
      * @param int    $header
      * @param string $type
      * @param int    $setopt
+     * @param bool   $is_json [返回数据是否是json 下载文件的时候用到]
      *
      * @return mixed
      * @throws EasemobError
      */
-    public static function postCurl($url, $option, $header = 0, $type = 'POST',$setopt = 10) {
+    public static function postCurl($url, $option, $header = 0, $type = 'POST',$setopt = 10, $is_json = true) {
         $curl = curl_init (); // 启动一个CURL会话
         if (! empty ( $option )) {
             if($type == "GET" ){
@@ -72,8 +73,12 @@ class Http
             throw new EasemobError($error_message,$status);
         }
 
-        $result_array = json_decode($result,true);
-
+        // 在下载文件的时候 不是json
+        if($is_json){
+            $result_array = json_decode($result,true);
+        }else{
+            $result_array = $result;
+        }
         return $result_array;
     }
 }
