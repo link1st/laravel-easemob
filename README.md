@@ -105,10 +105,53 @@ $user = \Easemob::getUserAll(100,'LTgzNDAxMjM3OTprcFJFRUpzdUVlYWh5V1UwQjNSbldR')
 `\Easemob::sendMessagePNS($users, $target_type = 'users', $action = "", $send_user = 'admin');`
 
 - - - 
+### 获取群信息
+`\Easemob::groups($group_ids);`
+
 ### 新建群
-`\Easemob::downloadFile($uuid, $share_secret);`
+`\Easemob::groupCreate($group_name, $group_description = '描述', $owner_user, $members_users = [], $is_public = true, $max_user = 200, $is_approval = true)`
+
+### 修改群信息
+`\Easemob::groupEdit($group_id, $group_name = "", $group_description = "", $max_user = 0)`
+
+### 删除群
+`\Easemob::groupDel($group_id)`
+
+### 获取所有群成员
+`\Easemob::groupUsers($group_id)`
+
+### 添加群成员
+`\Easemob::groupAddUsers($group_id, $users)`
+
+### 删除群成员
+`\Easemob::groupDelUsers($group_id, $users)`
+
+### 获取用户所以参加的群
+`\Easemob::userToGroups($user)`
+
+### 群转让
+`\Easemob::groupTransfer($group_id, $new_owner_user)`
+
+- - -
+### 查看聊天室详情
+`\Easemob::room($room_id)`
+
+### 创建聊天室
+`\Easemob::roomCreate($room_name, $owner_name, $room_description = "描述", $max_user = 200, $member_users = [])`
+
+### 删除聊天室
+`\Easemob::roomDel($room_id)`
+
+### 修改聊天室信息
+`\Easemob::roomEdit($room_id, $room_name = "", $room_description = "", $max_user = 0)`
+
+### 获取用户参加的聊天室
+`\Easemob::userToRooms($user)`
+
+### 聊天室添加成员
+`\Easemob::roomAddUsers($room_id, $users)`
 
 
-
-
+### 聊天室删除成员
+`\Easemob::roomDelUsers($room_id, $users)`
 
