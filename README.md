@@ -69,7 +69,7 @@ $user = \Easemob::getUserAll(100,'LTgzNDAxMjM3OTprcFJFRUpzdUVlYWh5V1UwQjNSbldR')
 ### 修改昵称
 `$user = \Easemob::editUserNickName('xiaoming2',11);`
 
-### 强制用户下载
+### 强制用户下线
 `$user = \Easemob::disconnect('xiaoming2');`
 
 ### 添加好友
