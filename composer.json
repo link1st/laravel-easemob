@@ -1,7 +1,12 @@
 {
     "name": "link1st/laravel-easemob",
     "description": "环信及时通讯laravel包开发，用于环信用户、群、聊天室等功能",
-    "license": "MIT",
+	"keywords": [
+        "link1st",
+        "laravel",
+        "easemob"
+    ],    
+	"license": "MIT",
     "minimum-stability": "stable",
     "type": "library",
     "require": {
