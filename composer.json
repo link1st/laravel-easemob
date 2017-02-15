@@ -6,7 +6,7 @@
         "laravel",
         "easemob"
     ],    
-	"license": "MIT",
+    "license": "MIT",
     "minimum-stability": "stable",
     "type": "library",
     "require": {

@@ -1,17 +1,20 @@
-<?php namespace link1st\Easemob;
+<?php
+namespace link1st\Easemob;
 
 use Illuminate\Support\ServiceProvider;
 
 use link1st\Easemob\App\Easemob;
 
-class EasemobServiceProvider extends ServiceProvider {
+class EasemobServiceProvider extends ServiceProvider
+{
 
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = false;
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = false;
+
 
     /**
      * 引导程序
@@ -30,15 +33,16 @@ class EasemobServiceProvider extends ServiceProvider {
 
     }
 
-	/**
+
+    /**
      * 默认包位置
      *
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
         // 将给定配置文件合现配置文件接合
         $this->mergeConfigFrom(
             __DIR__.'/config/easemob.php', 'easemob'
@@ -48,16 +52,17 @@ class EasemobServiceProvider extends ServiceProvider {
         $this->app->bind('Easemob', function () {
             return new Easemob();
         });
-	}
+    }
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return [];
-	}
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [];
+    }
 
 }
