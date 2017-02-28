@@ -6,6 +6,10 @@
 
 `"link1st/laravel-easemob": "dev-master"`
 
+或
+
+`composer require ink1st/laravel-easemob`
+
 在配置文件中添加 **config/app.php**
 
 ```php
