@@ -8,7 +8,7 @@
 
 或
 
-`composer require ink1st/laravel-easemob`
+`composer require link1st/laravel-easemob`
 
 在配置文件中添加 **config/app.php**
 
