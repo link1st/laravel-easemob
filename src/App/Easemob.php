@@ -191,7 +191,7 @@ class Easemob
     {
         $url          = $this->url.'users/'.$user_name.'/password';
         $option       = [
-            'newpassword' => $password
+            'newpassword' => $new_password
         ];
         $access_token = $this->getToken();
         $header []    = 'Authorization: Bearer '.$access_token;
