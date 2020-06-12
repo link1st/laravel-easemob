@@ -226,4 +226,22 @@ trait EasemobMessages
 
         return Http::postCurl($url, $option, $header, 'POST');
     }
+
+    /**
+     * 获取用户离线消息数
+     *
+     * @param $user_name
+     *
+     * @return mixed
+     * @throws EasemobError
+     */
+    public function offlineMsgCount($user_name)
+    {
+        $url = $this->url.'users/'.$user_name.'/offline_msg_count';
+        $option = [];
+        $access_token = $this->getToken();
+        $header [] = 'Authorization: Bearer '.$access_token;
+
+        return Http::postCurl($url, $option, $header, 'GET');
+    }
 }
