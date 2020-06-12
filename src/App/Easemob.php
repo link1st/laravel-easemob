@@ -63,6 +63,7 @@ class Easemob
      * @param string $nick_name [昵称]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function publicRegistration($name, $password = '', $nick_name = "")
     {
@@ -82,9 +83,9 @@ class Easemob
      *
      * @param        $name      [用户名]
      * @param string $password  [密码]
-     * @param string $nick_name [昵称]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function authorizationRegistration($name, $password = '123456')
     {
@@ -104,9 +105,10 @@ class Easemob
      * 授权注册用户——批量
      * 密码不为空
      *
-     * @param    array $users [用户名 包含 username,password的数组]
+     * @param array $users [用户名 包含 username,password的数组]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function authorizationRegistrations($users)
     {
@@ -126,6 +128,7 @@ class Easemob
      * @param $user_name
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function getUser($user_name)
     {
@@ -145,6 +148,7 @@ class Easemob
      * @param string $cursor [光标，在此之后的数据]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function getUserAll($limit = 10, $cursor = '')
     {
@@ -167,6 +171,7 @@ class Easemob
      * @param $user_name
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function delUser($user_name)
     {
@@ -186,6 +191,7 @@ class Easemob
      * @param $new_password [新密码]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function editUserPassword($user_name, $new_password)
     {
@@ -208,6 +214,7 @@ class Easemob
      * @param $nickname
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function editUserNickName($user_name, $nickname)
     {
@@ -228,6 +235,7 @@ class Easemob
      * @param $user_name
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function disconnect($user_name)
     {
@@ -249,6 +257,7 @@ class Easemob
      * @param $friend_username [朋友]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function addFriend($owner_username, $friend_username)
     {
@@ -268,6 +277,7 @@ class Easemob
      * @param $friend_username [朋友]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function delFriend($owner_username, $friend_username)
     {
@@ -286,6 +296,7 @@ class Easemob
      * @param $user_name
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function showFriends($user_name)
     {
@@ -332,6 +343,7 @@ class Easemob
      * @param $share_secret [秘钥]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function downloadFile($uuid, $share_secret)
     {
@@ -352,6 +364,7 @@ class Easemob
      * 返回token
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function getToken()
     {

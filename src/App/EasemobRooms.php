@@ -16,6 +16,7 @@ trait EasemobRooms
      * @param $room_id
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function room($room_id)
     {
@@ -38,6 +39,7 @@ trait EasemobRooms
      * @param array  $member_users
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function roomCreate($room_name, $owner_name, $room_description = "描述", $max_user = 200, $member_users = [])
     {
@@ -64,6 +66,7 @@ trait EasemobRooms
      * @param $room_id
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function roomDel($room_id)
     {
@@ -79,9 +82,9 @@ trait EasemobRooms
     /**
      * 修改聊天室信息
      *
-     * @param string $group_id
-     * @param string $group_name
-     * @param string $group_description
+     * @param        $room_id
+     * @param string $room_name
+     * @param string $room_description
      * @param int    $max_user
      *
      * @return mixed
@@ -113,6 +116,7 @@ trait EasemobRooms
      * @param $user
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function userToRooms($user)
     {
@@ -129,9 +133,10 @@ trait EasemobRooms
      * 聊天室添加成员——批量
      *
      * @param string $room_id
-     * @param array $users
+     * @param array  $users
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function roomAddUsers($room_id, $users)
     {
@@ -150,9 +155,10 @@ trait EasemobRooms
      * 聊天室删除成员——批量
      *
      * @param string $room_id
-     * @param array $users
+     * @param array  $users
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function roomDelUsers($room_id, $users)
     {

@@ -121,6 +121,7 @@ trait EasemobGroups
      * @param $group_id
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function groupUsers($group_id)
     {
@@ -190,6 +191,7 @@ trait EasemobGroups
      * @param $user
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function userToGroups($user)
     {
@@ -209,6 +211,7 @@ trait EasemobGroups
      * @param $new_owner_user [新的群主]
      *
      * @return mixed
+     * @throws EasemobError
      */
     public function groupTransfer($group_id, $new_owner_user)
     {
